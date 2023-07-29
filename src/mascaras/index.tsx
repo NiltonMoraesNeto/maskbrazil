@@ -1,10 +1,43 @@
 import React, { InputHTMLAttributes, useCallback } from "react";
 import "./styles.css";
 import { cep, currency, cpfcnpj, telefone, mascaraData } from "./maskBrazil";
+import {
+  telefoneDE,
+  telefoneGB,
+  telefoneAL,
+  telefoneBR,
+  telefoneGeralDdi02,
+  telefoneAD,
+  telefoneAO,
+  telefoneAmericaNorte,
+  telefoneAN,
+  telefoneAR,
+  telefoneDZ,
+} from "./masksPhonesDDI";
+import apiListCountriesBR from "../PhoneDDI/ListCountries/ptBR/listCountries.json";
+import apiListCountriesUS from "../PhoneDDI/ListCountries/enUS/listCountries.json";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  mask: "cep" | "currency" | "cpfcnpj" | "telefone" | "mascaraData";
+  mask:
+    | "cep"
+    | "currency"
+    | "cpfcnpj"
+    | "telefone"
+    | "mascaraData"
+    | "telefoneDE"
+    | "telefoneGB"
+    | "telefoneAL"
+    | "telefoneBR"
+    | "telefoneGeralDdi02"
+    | "telefoneAD"
+    | "telefoneAO"
+    | "telefoneAmericaNorte"
+    | "telefoneAN"
+    | "telefoneAR"
+    | "telefoneDZ";
   prefix?: string;
+  countryLanguage?: string;
+  //countryLanguage?: typeof apiListCountriesBR | typeof apiListCountriesUS;
 }
 
 const Input: React.FC<InputProps> = ({ mask, prefix, ...props }) => {
@@ -24,6 +57,39 @@ const Input: React.FC<InputProps> = ({ mask, prefix, ...props }) => {
       }
       if (mask === "mascaraData") {
         mascaraData(e);
+      }
+      if (mask === "telefoneBR") {
+        telefoneBR(e);
+      }
+      if (mask === "telefoneDE") {
+        telefoneDE(e);
+      }
+      if (mask === "telefoneGB") {
+        telefoneGB(e);
+      }
+      if (mask === "telefoneAL") {
+        telefoneAL(e);
+      }
+      if (mask === "telefoneGeralDdi02") {
+        telefoneGeralDdi02(e);
+      }
+      if (mask === "telefoneAD") {
+        telefoneAD(e);
+      }
+      if (mask === "telefoneAO") {
+        telefoneAO(e);
+      }
+      if (mask === "telefoneAmericaNorte") {
+        telefoneAmericaNorte(e);
+      }
+      if (mask === "telefoneAN") {
+        telefoneAN(e);
+      }
+      if (mask === "telefoneAR") {
+        telefoneAR(e);
+      }
+      if (mask === "telefoneDZ") {
+        telefoneDZ(e);
       }
     },
     [mask]

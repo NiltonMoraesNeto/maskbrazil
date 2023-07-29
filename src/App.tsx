@@ -2,6 +2,9 @@ import React, { useState, useCallback } from "react";
 
 import Input from "./mascaras";
 import "./App.css";
+import PhoneDDI from "./PhoneDDI/PhoneDDI";
+import apiListCountriesBR from "./PhoneDDI/ListCountries/ptBR/listCountries.json";
+import apiListCountriesUS from "./PhoneDDI/ListCountries/enUS/listCountries.json";
 
 interface Usuario {
   cep: string;
@@ -23,6 +26,10 @@ const App: React.FC = () => {
     },
     [usuario]
   );
+
+  function handleTeste(e: any) {
+    console.log(e);
+  }
 
   return (
     <div className="container">
@@ -65,6 +72,14 @@ const App: React.FC = () => {
           mask="mascaraData"
           onChange={handleChange}
           placeholder="DATA"
+        />
+      </div>
+      <div className="containerInput">
+        <PhoneDDI
+          value=""
+          defaultValue=""
+          onChange={handleTeste}
+          countryLanguage="apiListCountriesBR"
         />
       </div>
     </div>

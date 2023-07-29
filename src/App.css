@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,73 +22,73 @@
   }
 }
 
-.containerInput{
-    background-color: rgba(255,255,255, 0.2);
-    padding: 15px;
-    margin: 34px 0;
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 1px 3px 8px;
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px;
 }
 
-.containerInput input{
-    background-color: transparent;
-    border: 0;
-    font-size: 20px;
-    color: #fff;
-    outline: none;
-    margin-right: 8px;
+.containerInput input {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
 }
 
-.containerInput input::placeholder{
-    color: #F1f1f1;
+.containerInput input::placeholder {
+  color: #f1f1f1;
 }
 
-.buttonPesquisar{
-    background-color: transparent;
-    border: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.5s;
+.buttonPesquisar {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 
-.buttonPesquisar:hover{
-    transform: scale(1.2);
+.buttonPesquisar:hover {
+  transform: scale(1.2);
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    width: 500px;
-    border-radius: 8px;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 8px;
 }
 
-.main h2{
-    margin: 16px 0;
-    font-size: 39px;
+.main h2 {
+  margin: 16px 0;
+  font-size: 39px;
 }
 
-.main span{
-    margin-bottom: 16px;
-    font-weight: bold;
+.main span {
+  margin-bottom: 16px;
+  font-weight: bold;
 }
 
-@media (max-width: 620px){
-    .title{
-        font-size: 60px;
-    }
+@media (max-width: 620px) {
+  .title {
+    font-size: 60px;
+  }
 
-    .main h2{
-        font-size: 28px;
-    }
+  .main h2 {
+    font-size: 28px;
+  }
 
-    .main{
-        width: 80%;
-        min-height: 250px;
-    }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
 }
